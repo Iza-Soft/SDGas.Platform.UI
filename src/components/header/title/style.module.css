@@ -1,0 +1,72 @@
+div.container {
+  padding: 5px 0 5px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @media only screen and (min-width: 992px) {
+    flex-direction: row;
+  }
+  align-items: center;
+}
+
+div.container > .wrapper {
+  border: 0px solid black;
+  width: 99%;
+  /* max-width: 955px; */
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+  @media only screen and (min-width: 992px) {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .position {
+    text-align: center;
+  }
+}
+
+.question {
+  @media only screen and (min-width: 992px) {
+    padding: 20px 0 5px 0;
+  }
+  font-size: 20px;
+  font-weight: 500;
+  @media only screen and (min-width: 768px) {
+    text-wrap: nowrap;
+  }
+}
+
+.call {
+  @media only screen and (min-width: 992px) {
+    padding: 5px 0 10px 0;
+  }
+  font-weight: 500;
+}
+
+.btn_wrapper {
+  margin-top: 25px;
+  @media only screen and (max-width: 768px) {
+    margin: 10px 0 10px 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .btn_container {
+    border: 0px solid black;
+    width: 40%;
+    text-align: right;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e76610;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Roboto", Sans-serif;
+}

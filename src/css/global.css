@@ -15,11 +15,3 @@ code {
 .svg-inline--fa {
   padding-right: 10px;
 }
-
-div.background {
-  background-image: url("../images/SDGasBodyBackground.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  /* opacity: 0.5; */
-  /* transition: background 0.3s, border-radius 0.3s, opacity 0.3s; */
-}

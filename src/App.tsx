@@ -5,7 +5,7 @@ import Workspace from "./components/workspace/workspace";
 
 const App = (): React.JSX.Element => {
   return (
-    <div className="background">
+    <div>
       <Header />
       <Workspace />
       <Footer />
