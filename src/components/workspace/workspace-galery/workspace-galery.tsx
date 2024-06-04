@@ -1,12 +1,12 @@
 import React from "react";
 import style from "./style.module.css";
 
-const WorkspaceHome = (): React.JSX.Element => {
+const WorkspaceGalery = (): React.JSX.Element => {
   return (
     <div className={style.container}>
-      <div className={style.wrapper}>Home</div>
+      <div className={style.wrapper}>Galery</div>
     </div>
   );
 };
 
-export default WorkspaceHome;
+export default WorkspaceGalery;

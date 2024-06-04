@@ -1,12 +1,12 @@
 import React from "react";
 import style from "./style.module.css";
 
-const WorkspaceHome = (): React.JSX.Element => {
+const WorkspaceService = (): React.JSX.Element => {
   return (
     <div className={style.container}>
-      <div className={style.wrapper}>Home</div>
+      <div className={style.wrapper}>Service</div>
     </div>
   );
 };
 
-export default WorkspaceHome;
+export default WorkspaceService;
