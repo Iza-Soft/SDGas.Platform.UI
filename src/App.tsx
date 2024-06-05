@@ -2,14 +2,15 @@ import React from "react";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import Workspace from "./components/workspace/workspace";
+import { BrowserRouter } from "react-router-dom";
 
 const App = (): React.JSX.Element => {
   return (
-    <div>
+    <BrowserRouter>
       <Header />
       <Workspace />
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 };
 
