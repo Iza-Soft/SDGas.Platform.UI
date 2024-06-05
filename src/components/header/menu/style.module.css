@@ -1,7 +1,7 @@
 div.container {
   display: flex;
   justify-content: center;
-  background: rgba(2, 66, 6, 0.9);
+  background: #e76610;
 }
 
 div.container > .wrapper {

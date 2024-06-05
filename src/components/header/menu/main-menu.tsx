@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./style.module.css";
 import { Link } from "react-router-dom";
+import DrawerMenu from "../drawer/drawer-menu";
 
 const MainMenu = (): React.JSX.Element => {
   return (
@@ -40,13 +41,14 @@ const MainMenu = (): React.JSX.Element => {
             </li>
 
             <li className={style.navbar__item}>
-              <Link to="/galery" className={style.navbar__link}>
+              <Link to="/gallery" className={style.navbar__link}>
                 <i data-feather="gallery"></i>
                 <span>Gallery</span>
               </Link>
             </li>
           </ul>
         </nav>
+        <DrawerMenu />
       </div>
     </div>
   );
