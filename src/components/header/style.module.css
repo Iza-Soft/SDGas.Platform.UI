@@ -1,5 +1,5 @@
 .background {
-  background-image: url("../../images/SDGasHeaderBackground.png");
+  /* background-image: url("../../images/SDGasHeaderBackground.png"); */
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 70vh;
@@ -8,23 +8,9 @@
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
   border-radius: 0 0 85% 85% / 30%;
 }
-.elementskit_btn {
-  padding: 20px 20px 20px 20px;
-  font-family: "Roboto", Sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1em;
-  color: #ffffff;
-  background-color: #ffa400;
-  border-style: solid;
-  border-width: 1px 1px 1px 1px;
-  border-color: #ffb93c;
-  border-radius: 5px 5px 5px 5px;
-  text-decoration: none;
-}
 
 .block {
-  background: #c4bcbc;
+  /* background: #c4bcbc; */
   filter: alpha(opacity=60);
   /* IE */
   -moz-opacity: 0.4;

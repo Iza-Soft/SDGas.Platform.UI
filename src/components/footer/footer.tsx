@@ -12,7 +12,7 @@ import {
 const Footer = (): React.JSX.Element => {
   return (
     <div className={style.footer}>
-      <div style={{ display: "flex", gap: "40px" }}>
+      {/* <div style={{ display: "flex", gap: "40px" }}>
         <div>
           <img src={logo} width="150" />
         </div>
@@ -191,7 +191,7 @@ const Footer = (): React.JSX.Element => {
             page.
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,0 +1,15 @@
+.navbar_drawer {
+  display: none;
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    text-transform: uppercase;
+  }
+}
+
+.drawer_title {
+  padding: 25px;
+  display: flex;
+  gap: 20px;
+}
