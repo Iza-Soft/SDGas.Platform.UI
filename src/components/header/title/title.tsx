@@ -15,7 +15,18 @@ function Title(): React.ReactElement {
             <div className={style.question}>
               ARE YOU LOOKING FOR A GAS ENGINEER OR PLUMBER IN FIFE?
             </div>
-            <div className={style.call}>CALL US 24x7, SEVEN DAYS A WEEK</div>
+            <div className={style.call}>
+              <span className={style.blurring}>CALL </span>
+              <span className={style.blurring}>US </span>
+              <span className={style.blurring}>24x7, </span>
+              <span className={style.blurring}>SEVEN </span>
+              <span className={style.blurring}>DAYS </span>
+              <span className={style.blurring}>A </span>
+              <span className={style.blurring}>WEEK</span>
+              {/* <span className={style.blurring}>
+                CALL US 24x7, SEVEN DAYS A WEEK
+              </span> */}
+            </div>
           </div>
         </div>
         <div className={style.btn_container}>

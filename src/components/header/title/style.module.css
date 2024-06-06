@@ -32,18 +32,15 @@ div.container > .wrapper {
   @media only screen and (min-width: 992px) {
     padding: 20px 0 5px 0;
   }
-  font-size: 20px;
-  font-weight: 500;
   @media only screen and (min-width: 768px) {
     text-wrap: nowrap;
   }
+  line-height: 2em;
+  font-weight: 600;
 }
 
 .call {
-  @media only screen and (min-width: 992px) {
-    padding: 5px 0 10px 0;
-  }
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .btn_wrapper {
@@ -64,9 +61,103 @@ div.container > .wrapper {
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #e22a21;
+  background-color: #203568;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
   font-family: "Roboto", Sans-serif;
+}
+
+span.blurring {
+  color: transparent;
+  animation: blur 10s ease-out infinite;
+  -webkit-animation: blur 10s ease-out infinite;
+}
+
+span.blurring:nth-child(1) {
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+}
+
+span.blurring:nth-child(2) {
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+}
+span.blurring:nth-child(3) {
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+}
+span.blurring:nth-child(4) {
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+}
+span.blurring:nth-child(5) {
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+}
+span.blurring:nth-child(6) {
+  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+}
+span.blurring:nth-child(7) {
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+}
+
+@keyframes blur {
+  0% {
+    text-shadow: 0 0 100px #444;
+    opacity: 0;
+  }
+  5% {
+    text-shadow: 0 0 90px #444;
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    text-shadow: 0 0 0px #444;
+  }
+  80% {
+    text-shadow: 0 0 0px #444;
+  }
+  85% {
+    opacity: 1;
+  }
+  95% {
+    text-shadow: 0 0 90px #444;
+  }
+  100% {
+    text-shadow: 0 0 100px #444;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blur {
+  0% {
+    text-shadow: 0 0 100px #444;
+    opacity: 0;
+  }
+  5% {
+    text-shadow: 0 0 90px #444;
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    text-shadow: 0 0 0px #444;
+  }
+  80% {
+    text-shadow: 0 0 0px #444;
+  }
+  85% {
+    opacity: 1;
+  }
+  95% {
+    text-shadow: 0 0 90px #444;
+  }
+  100% {
+    text-shadow: 0 0 100px #444;
+    opacity: 0;
+  }
 }

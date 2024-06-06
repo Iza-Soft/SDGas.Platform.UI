@@ -34,13 +34,7 @@ const DrawerMenu = (): React.JSX.Element => {
       role="presentation"
       onClick={() => handleDrawerOpen(false)}
     >
-      <div
-        style={{
-          padding: "25px",
-          display: "flex",
-          gap: "20px",
-        }}
-      >
+      <div className={style.drawer_title}>
         <div>
           <img src={flame} alt="Logo" style={{ height: 44 }} />
         </div>
@@ -53,12 +47,9 @@ const DrawerMenu = (): React.JSX.Element => {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              <FaHome size={25} />
+              <FaHome size={25} className="icon" />
             </ListItemIcon>
-            <Link
-              to="/home"
-              style={{ textDecoration: "none", color: "GrayText" }}
-            >
+            <Link to="/home" className="link-decoration">
               <span>HOME</span>
             </Link>
           </ListItemButton>
@@ -66,12 +57,9 @@ const DrawerMenu = (): React.JSX.Element => {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              <FaServicestack size={25} />
+              <FaServicestack size={25} className="icon" />
             </ListItemIcon>
-            <Link
-              to="/service"
-              style={{ textDecoration: "none", color: "GrayText" }}
-            >
+            <Link to="/service" className="link-decoration">
               <span>SERVICE</span>
             </Link>
           </ListItemButton>
@@ -79,12 +67,9 @@ const DrawerMenu = (): React.JSX.Element => {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              <AiFillSafetyCertificate size={25} />
+              <AiFillSafetyCertificate size={25} className="icon" />
             </ListItemIcon>
-            <Link
-              to="/certificates"
-              style={{ textDecoration: "none", color: "GrayText" }}
-            >
+            <Link to="/certificates" className="link-decoration">
               <span>CERTIFICATES</span>
             </Link>
           </ListItemButton>
@@ -92,12 +77,9 @@ const DrawerMenu = (): React.JSX.Element => {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              <RiCalendarScheduleFill size={25} />
+              <RiCalendarScheduleFill size={25} className="icon" />
             </ListItemIcon>
-            <Link
-              to="/schedule"
-              style={{ textDecoration: "none", color: "GrayText" }}
-            >
+            <Link to="/schedule" className="link-decoration">
               <span>SCHEDULE</span>
             </Link>
           </ListItemButton>
@@ -105,12 +87,9 @@ const DrawerMenu = (): React.JSX.Element => {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              <ImPriceTags size={25} />
+              <ImPriceTags size={25} className="icon" />
             </ListItemIcon>
-            <Link
-              to="/Price"
-              style={{ textDecoration: "none", color: "GrayText" }}
-            >
+            <Link to="/Price" className="link-decoration">
               <span>PRICE</span>
             </Link>
           </ListItemButton>
@@ -118,12 +97,9 @@ const DrawerMenu = (): React.JSX.Element => {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              <SiPhoton size={25} />
+              <SiPhoton size={25} className="icon" />
             </ListItemIcon>
-            <Link
-              to="/gallery"
-              style={{ textDecoration: "none", color: "GrayText" }}
-            >
+            <Link to="/gallery" className="link-decoration">
               <span>GALLERY</span>
             </Link>
           </ListItemButton>

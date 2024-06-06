@@ -1,15 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Nunito", Roboto, Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  color: #444 !important;
 }
 
 .svg-inline--fa {
@@ -18,4 +14,19 @@ code {
 
 .css-cveggr-MuiListItemIcon-root {
   min-width: 38px !important;
+}
+
+.link-decoration {
+  text-decoration: none;
+  color: #203568;
+}
+
+.icon {
+  color: #203568;
+}
+
+.textarea {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-size: 20px;
 }
