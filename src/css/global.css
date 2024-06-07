@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
+:root {
+  --sapphire-color: #0e2e5c;
+}
+
 body {
   margin: 0;
   font-family: "Nunito", Roboto, Arial, Helvetica, sans-serif;
@@ -30,3 +34,21 @@ body {
   text-rendering: optimizelegibility;
   font-size: 20px;
 }
+
+/* row */
+.row {
+  width: 100%;
+}
+
+/* padding */
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pt-40 {
+  padding-top: 40px;
+}
+
+/* .sapphire {
+  color: var(--sapphire-color);
+} */

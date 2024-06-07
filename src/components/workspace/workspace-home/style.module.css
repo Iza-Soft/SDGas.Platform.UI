@@ -22,3 +22,79 @@ div.container > .wrapper {
     gap: 20px;
   }
 }
+
+.card {
+  display: flex;
+  width: 100%;
+  margin-top: 55px;
+}
+
+.card > .head {
+  width: 20%;
+  height: 200px;
+  background-color: #efefef;
+  border-radius: 70px 0px 0px 70px;
+  position: relative;
+
+  .wrapper {
+    width: 60%;
+    height: 75%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #0e2e5c;
+
+    .icon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+}
+
+.card > .body {
+  width: 80%;
+  height: 200px;
+  background-color: #efefef;
+  border-radius: 0px 70px 70px 0px;
+  position: relative;
+
+  .wrapper {
+    height: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    .title {
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizelegibility;
+      font-size: 22px;
+      line-height: 2em;
+      font-weight: 800;
+    }
+
+    .content {
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizelegibility;
+      font-size: 17px;
+      padding-right: 10px;
+    }
+  }
+}
+
+.heading {
+  color: #0e2e5c;
+  width: 200px;
+  text-align: center;
+  margin: auto;
+}
