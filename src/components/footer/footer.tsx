@@ -8,10 +8,50 @@ import {
   faLocationDot,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
+import { FaPhone } from "react-icons/fa6";
 
 const Footer = (): React.JSX.Element => {
   return (
     <div className={style.footer}>
+      <div className={style.container}>
+        <div className={style.wrapper}>
+          <div className={`${style.title}`}>
+            <div style={{ padding: "10px 0 0 0" }}>
+              <a href="tel:07480969210" style={{ textDecoration: "none" }}>
+                <FaPhone
+                  size="65"
+                  className={style.icon}
+                  color="#ffb814"
+                  style={{ marginRight: "20px" }}
+                />
+              </a>
+            </div>
+            <div>
+              <div className="textarea">
+                Call for specialized Heating & Plumbing services
+              </div>
+              <div
+                style={{
+                  fontSize: "50px",
+                  fontWeight: "600",
+                  textAlign: "center",
+                }}
+              >
+                <a
+                  href="tel:07480969210"
+                  style={{ textDecoration: "none", color: "#ffb814" }}
+                >
+                  0748 096 9210
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={style.wrapper}>
+          <div>row 1</div>
+          <div>row 2</div>
+        </div>
+      </div>
       {/* <div style={{ display: "flex", gap: "40px" }}>
         <div>
           <img src={logo} width="150" />
