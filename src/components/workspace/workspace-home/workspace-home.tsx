@@ -40,10 +40,15 @@ const WorkspaceHome = (): React.JSX.Element => {
               <Divider color="#0E2E5C" />
             </div>
           </div>
+
           <div className={style.card}>
             <div className={style.head}>
               <div className={style.wrapper}>
-                <PiWarningFill size="100" className={style.icon} color="#fff" />
+                <PiWarningFill
+                  size="100"
+                  className={style.icon}
+                  color="#ffb814"
+                />
               </div>
             </div>
             <div className={style.body}>
@@ -60,7 +65,7 @@ const WorkspaceHome = (): React.JSX.Element => {
           <div className={style.card}>
             <div className={style.head}>
               <div className={style.wrapper}>
-                <PiDropFill size="100" className={style.icon} color="#fff" />
+                <PiDropFill size="100" className={style.icon} color="#ffb814" />
               </div>
             </div>
             <div className={style.body}>
@@ -78,7 +83,11 @@ const WorkspaceHome = (): React.JSX.Element => {
           <div className={style.card}>
             <div className={style.head}>
               <div className={style.wrapper}>
-                <GiAutoRepair size="100" className={style.icon} color="#fff" />
+                <GiAutoRepair
+                  size="100"
+                  className={style.icon}
+                  color="#ffb814"
+                />
               </div>
             </div>
             <div className={style.body}>
@@ -397,6 +406,30 @@ const WorkspaceHome = (): React.JSX.Element => {
                   5 Star Rating
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className={`${style.carousel} pb-40`}>
+            <div>
+              <div className={style.content}></div>
+            </div>
+            <div>
+              <div className={style.content}></div>
+            </div>
+            <div>
+              <div className={style.content}></div>
+            </div>
+            <div>
+              <div className={style.content}></div>
+            </div>
+            <div>
+              <div className={style.content}></div>
+            </div>
+            <div>
+              <div className={style.content}></div>
+            </div>
+            <div>
+              <div className={style.content}></div>
             </div>
           </div>
         </div>

@@ -49,6 +49,14 @@ body {
   padding-top: 40px;
 }
 
+.pb-5 {
+  padding-bottom: 5px;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
 .pb-20 {
   padding-bottom: 20px;
 }
@@ -63,3 +71,28 @@ body {
 /* .sapphire {
   color: var(--sapphire-color);
 } */
+
+a.decoration {
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+}
+
+a.decoration::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+a.decoration:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
