@@ -10,6 +10,8 @@ import { ImCoinPound } from "react-icons/im";
 import { FaPhone } from "react-icons/fa6";
 import { FaDigitalOcean } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
+import boilerInstallation from "../../../images/boiler-installation.jpg";
+import boilerRepair from "../../../images/boiler-repair.jpg";
 
 const WorkspaceHome = (): React.JSX.Element => {
   return (
@@ -40,7 +42,6 @@ const WorkspaceHome = (): React.JSX.Element => {
               <Divider color="#0E2E5C" />
             </div>
           </div>
-
           <div className={style.card}>
             <div className={style.head}>
               <div className={style.wrapper}>
@@ -53,11 +54,20 @@ const WorkspaceHome = (): React.JSX.Element => {
             </div>
             <div className={style.body}>
               <div className={style.wrapper}>
-                <div className={style.title}>Emergency Engineer call outs</div>
-                <div className={`${style.content}`}>
-                  For urgent issues like thermostat failure to boilers not
-                  heating up, call us and we will provide you our best and
-                  certified heating engineer at the same day.
+                <div>
+                  <div className={style.title}>
+                    Emergency Engineer call outs
+                  </div>
+                  <div className={`${style.content}`}>
+                    For urgent issues like thermostat failure to boilers not
+                    heating up, call us and we will provide you our best and
+                    certified heating engineer at the same day.
+                  </div>
+                  <div className={`${style.tools} pt-20`}>
+                    <a href="#" className="btn">
+                      For more
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -70,13 +80,28 @@ const WorkspaceHome = (): React.JSX.Element => {
             </div>
             <div className={style.body}>
               <div className={style.wrapper}>
-                <div className={style.title}>Boiler Installation</div>
-                <div className={style.content}>
-                  Whether a new build or upgrading an old boiler, our engineers
-                  can help you make an informed decision about the,place of
-                  installation, make, model, type and importantly the power of
-                  the right boiler for your home.
+                <div>
+                  <div className={style.title}>Boiler Installation</div>
+                  <div className={style.content}>
+                    Whether a new build or upgrading an old boiler, our
+                    engineers can help you make an informed decision about
+                    the,place of installation, make, model, type and importantly
+                    the power of the right boiler for your home.
+                  </div>
+                  <div className={`${style.tools} pt-20`}>
+                    <a href="#" className="btn">
+                      For more
+                    </a>
+                  </div>
                 </div>
+              </div>
+              <div className={style.image}>
+                <img
+                  src={boilerInstallation}
+                  width="250"
+                  alt="Logo"
+                  className={style.pic}
+                />
               </div>
             </div>
           </div>
@@ -92,12 +117,27 @@ const WorkspaceHome = (): React.JSX.Element => {
             </div>
             <div className={style.body}>
               <div className={style.wrapper}>
-                <div className={style.title}>Boiler Repair</div>
-                <div className={style.content}>
-                  We are able to repair boilers installed at your home. Our
-                  experienced engineers will come at your door step and diagnose
-                  the issue and repair it .
+                <div>
+                  <div className={style.title}>Boiler Repair</div>
+                  <div className={style.content}>
+                    We are able to repair boilers installed at your home. Our
+                    experienced engineers will come at your door step and
+                    diagnose the issue and repair it .
+                  </div>
+                  <div className={`${style.tools} pt-20`}>
+                    <a href="#" className="btn">
+                      For more
+                    </a>
+                  </div>
                 </div>
+              </div>
+              <div className={style.image}>
+                <img
+                  src={boilerRepair}
+                  width="250"
+                  alt="Logo"
+                  className={style.pic}
+                />
               </div>
             </div>
           </div>
@@ -409,27 +449,29 @@ const WorkspaceHome = (): React.JSX.Element => {
             </div>
           </div>
 
-          <div className={`${style.carousel} pb-40`}>
-            <div>
-              <div className={style.content}></div>
-            </div>
-            <div>
-              <div className={style.content}></div>
-            </div>
-            <div>
-              <div className={style.content}></div>
-            </div>
-            <div>
-              <div className={style.content}></div>
-            </div>
-            <div>
-              <div className={style.content}></div>
-            </div>
-            <div>
-              <div className={style.content}></div>
-            </div>
-            <div>
-              <div className={style.content}></div>
+          <div className="row">
+            <div className={`${style.carousel} pb-40`}>
+              <div>
+                <div className={style.content}></div>
+              </div>
+              <div>
+                <div className={style.content}></div>
+              </div>
+              <div>
+                <div className={style.content}></div>
+              </div>
+              <div>
+                <div className={style.content}></div>
+              </div>
+              <div>
+                <div className={style.content}></div>
+              </div>
+              <div>
+                <div className={style.content}></div>
+              </div>
+              <div>
+                <div className={style.content}></div>
+              </div>
             </div>
           </div>
         </div>

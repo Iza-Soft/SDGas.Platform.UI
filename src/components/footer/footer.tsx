@@ -193,7 +193,7 @@ const Footer = (): React.JSX.Element => {
             <div style={{ border: "0px solid white", width: "100%" }}>
               <h2 style={{ color: "#ffa400", fontSize: "20px", margin: "0" }}>
                 <a
-                  href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x48795e35dc08d873:0x254b33aacf3e73d3?source=g.page.m.we"
+                  href="https://www.google.co.uk/maps/place/SD+Gas/@56.1188068,-3.1801092,17z/data=!3m1!4b1!4m6!3m5!1s0x4887b5959f440399:0x69a9d8c2e18ef8b!8m2!3d56.1188068!4d-3.1801092!16s%2Fg%2F11qh8nb44h?entry=ttu"
                   target="_blank"
                 >
                   <img src={rating} width="200" />
@@ -203,7 +203,7 @@ const Footer = (): React.JSX.Element => {
                 Our services come recommended from many past clients and You can
                 find a number of their positive review on our
                 <a
-                  href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x48795e35dc08d873:0x254b33aacf3e73d3?source=g.page.m.we"
+                  href="https://www.google.co.uk/maps/place/SD+Gas/@56.1188068,-3.1801092,17z/data=!3m1!4b1!4m6!3m5!1s0x4887b5959f440399:0x69a9d8c2e18ef8b!8m2!3d56.1188068!4d-3.1801092!16s%2Fg%2F11qh8nb44h?entry=ttu"
                   className={`${style.navbar__link} decoration`}
                   target="_blank"
                 >

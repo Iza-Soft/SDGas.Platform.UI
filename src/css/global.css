@@ -35,6 +35,16 @@ body {
   font-size: 20px;
 }
 
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0e2e5c;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Nunito", Roboto, Arial, Helvetica, sans-serif;
+}
+
 /* row */
 .row {
   width: 100%;
