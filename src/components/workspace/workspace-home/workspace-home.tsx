@@ -12,6 +12,7 @@ import { FaDigitalOcean } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import boilerInstallation from "../../../images/boiler-installation.jpg";
 import boilerRepair from "../../../images/boiler-repair.jpg";
+import boilerMaintenance from "../../../images/boiler-maintenance.jpg";
 
 const WorkspaceHome = (): React.JSX.Element => {
   return (
@@ -19,10 +20,6 @@ const WorkspaceHome = (): React.JSX.Element => {
       <div className={style.wrapper}>
         <div className="row">
           <div className="row">
-            {/* <div className={style.heading}>
-              <h2>Why Us</h2>
-              <Divider color="#0E2E5C" />
-            </div> */}
             <div className="textarea pt-20">
               <p>
                 We are a small reputable, established company based in Oxford we
@@ -56,12 +53,14 @@ const WorkspaceHome = (): React.JSX.Element => {
               <div className={style.wrapper}>
                 <div>
                   <div className={style.title}>
-                    Emergency Engineer call outs
+                    Boiler Maintenance & Servicing
                   </div>
                   <div className={`${style.content}`}>
-                    For urgent issues like thermostat failure to boilers not
-                    heating up, call us and we will provide you our best and
-                    certified heating engineer at the same day.
+                    Boiler maintenance is never on anyone high priority list,
+                    however, it is important to have your boiler serviced every
+                    year to ensure that it is safe and not putting you and your
+                    family in danger. It is also a requirement by the boiler
+                    manufacturers in order to keep the warranty valid.
                   </div>
                   <div className={`${style.tools} pt-20`}>
                     <a href="#" className="btn">
@@ -69,6 +68,14 @@ const WorkspaceHome = (): React.JSX.Element => {
                     </a>
                   </div>
                 </div>
+              </div>
+              <div className={style.image}>
+                <img
+                  src={boilerMaintenance}
+                  width="250"
+                  alt="Logo"
+                  className={style.pic}
+                />
               </div>
             </div>
           </div>

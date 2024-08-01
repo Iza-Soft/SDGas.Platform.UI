@@ -1,0 +1,21 @@
+.service__link {
+  margin: 5px 0 0 10px;
+  color: #0e2e5c !important;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.service__link::before {
+  background-color: #0e2e5c !important;
+  font-weight: 600;
+}
+
+.active {
+  background-color: #efefef;
+  border-radius: 15px 0 0 15px;
+}
+
+.active,
+.notactive {
+  padding: 20px;
+}

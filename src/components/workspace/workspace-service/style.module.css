@@ -22,3 +22,9 @@ div.container > .wrapper {
     gap: 20px;
   }
 }
+
+.content {
+  background-color: #efefef;
+  padding: 10px;
+  width: 78%;
+}
