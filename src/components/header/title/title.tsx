@@ -33,7 +33,7 @@ function Title(): React.ReactElement {
           <div className={`${style.position} ${style.btn_wrapper}`}>
             <a href="tel:07480969210" className="btn">
               <FontAwesomeIcon icon={faPhone} style={{ marginRight: "5px" }} />
-              0748 096 9210
+              CALL FOR SPECIALIZED SERVICE
             </a>
           </div>
         </div>

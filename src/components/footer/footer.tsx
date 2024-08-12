@@ -181,11 +181,6 @@ const Footer = (): React.JSX.Element => {
               </div>
               <div className="pb-5">
                 <a href="#" className={`${style.navbar__link} decoration`}>
-                  Price
-                </a>
-              </div>
-              <div className="pb-5">
-                <a href="#" className={`${style.navbar__link} decoration`}>
                   Terms & Conditions
                 </a>
               </div>
