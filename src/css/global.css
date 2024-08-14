@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
+:root {
+  --sapphire-color: #0e2e5c;
+}
+
 body {
   margin: 0;
   font-family: "Nunito", Roboto, Arial, Helvetica, sans-serif;
@@ -29,4 +33,107 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
   font-size: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0e2e5c;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Nunito", Roboto, Arial, Helvetica, sans-serif;
+}
+
+/* row */
+.row {
+  width: 100%;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+/* padding */
+.pt-10 {
+  padding-top: 10px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pt-40 {
+  padding-top: 40px;
+}
+
+.pt-50 {
+  padding-top: 50px;
+}
+
+.pt-60 {
+  padding-top: 60px;
+}
+
+.pb-5 {
+  padding-bottom: 5px;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.pb-40 {
+  padding-bottom: 40px;
+}
+
+.pb-60 {
+  padding-bottom: 60px;
+}
+/* .sapphire {
+  color: var(--sapphire-color);
+} */
+
+a.decoration {
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+}
+
+a.decoration::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+a.decoration:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  max-width: 1024px !important;
+}
+.css-bdhsul-MuiTypography-root-MuiDialogTitle-root {
+  background-color: #e76610;
+  font-family: "Nunito", Roboto, Arial, Helvetica, sans-serif !important;
+}
+.css-qfso29-MuiTypography-root-MuiDialogContentText-root {
+  color: #444 !important;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-size: 20px !important;
+  font-family: "Nunito", Roboto, Arial, Helvetica, sans-serif !important;
 }

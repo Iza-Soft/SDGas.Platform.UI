@@ -33,7 +33,7 @@ const MainMenu = (): React.JSX.Element => {
                 <span>Schedule</span>
               </Link>
             </li>
-            <li className={style.navbar__item}>
+            {/* <li className={style.navbar__item}>
               <Link to="/price" className={style.navbar__link}>
                 <i data-feather="price"></i>
                 <span>Price</span>
@@ -45,7 +45,7 @@ const MainMenu = (): React.JSX.Element => {
                 <i data-feather="gallery"></i>
                 <span>Gallery</span>
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
         <DrawerMenu />

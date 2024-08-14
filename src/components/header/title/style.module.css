@@ -53,19 +53,9 @@ div.container > .wrapper {
 @media only screen and (min-width: 992px) {
   .btn_container {
     border: 0px solid black;
-    width: 40%;
+    width: 47%;
     text-align: right;
   }
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #203568;
-  color: #fff;
-  border-radius: 5px;
-  text-decoration: none;
-  font-family: "Roboto", Sans-serif;
 }
 
 span.blurring {

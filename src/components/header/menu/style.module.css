@@ -72,7 +72,7 @@ li > a {
   transition: 500ms ease all;
 }
 .navbar__link:hover svg {
-  stroke: #c4151c;
+  stroke: #fff;
 }
 .navbar:not(:hover) .navbar__link:focus span,
 .navbar__link:hover span {
@@ -87,8 +87,8 @@ li > a {
   bottom: -1.25rem;
   height: 0.5rem;
   width: 2px;
-  background: #c4151c;
-  box-shadow: 0 -0.5rem #c4151c, 0 -0.5rem #c4151c, 0 0 3rem 0.5rem #c4151c,
+  background: #fff;
+  box-shadow: 0 -0.5rem #fff, 0 -0.5rem #fff, 0 0 3rem 0.5rem #fff,
     2rem 0 0 rgba(255, 255, 255, 0.2), -3rem 0 0 rgba(255, 255, 255, 0.2),
     6rem 0 0 rgba(255, 255, 255, 0.2), -6rem 0 0 rgba(255, 255, 255, 0.2),
     9rem 0 0 rgba(255, 255, 255, 0.2), -9rem 0 0 rgba(255, 255, 255, 0.2),
