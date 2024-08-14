@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createRef, useRef } from "react";
 import style from "./style.module.css";
 import rating from "../../images/SDGasRating.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,8 +8,15 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { FaPhone } from "react-icons/fa6";
+import WorkspaceTerms from "../workspace/workspace-terms/workspace-terms";
+
+type RefHandler = {
+  handleClickOpen: () => void;
+};
 
 const Footer = (): React.JSX.Element => {
+  const ref = useRef() as React.MutableRefObject<RefHandler>;
+
   return (
     <div className={style.footer}>
       <div className={style.container}>
@@ -180,7 +187,11 @@ const Footer = (): React.JSX.Element => {
                 </a>
               </div>
               <div className="pb-5">
-                <a href="#" className={`${style.navbar__link} decoration`}>
+                <a
+                  href="#"
+                  className={`${style.navbar__link} decoration`}
+                  onClick={() => ref?.current?.handleClickOpen()}
+                >
                   Terms & Conditions
                 </a>
               </div>
@@ -209,6 +220,8 @@ const Footer = (): React.JSX.Element => {
           </div>
         </div>
       </div>
+
+      <WorkspaceTerms ref={ref} />
     </div>
   );
 };

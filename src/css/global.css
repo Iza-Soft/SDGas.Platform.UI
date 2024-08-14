@@ -50,6 +50,10 @@ body {
   width: 100%;
 }
 
+.p-10 {
+  padding: 10px;
+}
+
 /* padding */
 .pt-10 {
   padding-top: 10px;
@@ -117,4 +121,19 @@ a.decoration::before {
 a.decoration:hover::before {
   transform-origin: left;
   transform: scaleX(1);
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  max-width: 1024px !important;
+}
+.css-bdhsul-MuiTypography-root-MuiDialogTitle-root {
+  background-color: #e76610;
+  font-family: "Nunito", Roboto, Arial, Helvetica, sans-serif !important;
+}
+.css-qfso29-MuiTypography-root-MuiDialogContentText-root {
+  color: #444 !important;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-size: 20px !important;
+  font-family: "Nunito", Roboto, Arial, Helvetica, sans-serif !important;
 }
