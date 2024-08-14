@@ -2,7 +2,7 @@ import React from "react";
 import style from "./style.module.css";
 import { Divider } from "@mui/material";
 import gasSafety from "../../../images/gas-safety.png";
-import gasCertificate from "../../../images/gas-certificate.jpeg";
+import gasCertificate from "../../../images/gas-certificate.jpg";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

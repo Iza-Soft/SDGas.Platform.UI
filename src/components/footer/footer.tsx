@@ -95,7 +95,8 @@ const Footer = (): React.JSX.Element => {
                 </div>
                 <div>
                   <a
-                    href="#"
+                    href="https://www.google.co.uk/maps/place/SD+Gas/@56.1188068,-3.1801092,17z/data=!3m1!4b1!4m6!3m5!1s0x4887b5959f440399:0x69a9d8c2e18ef8b!8m2!3d56.1188068!4d-3.1801092!16s%2Fg%2F11qh8nb44h?entry=ttu"
+                    target="_blank"
                     className={`${style.navbar__link} decoration`}
                     style={{ margin: 0 }}
                   >
@@ -167,22 +168,31 @@ const Footer = (): React.JSX.Element => {
                 Quick Links
               </h2>
               <div className="pb-5">
-                <a href="#" className={`${style.navbar__link} decoration`}>
+                <a href="/home" className={`${style.navbar__link} decoration`}>
                   Home
                 </a>
               </div>
               <div className="pb-5">
-                <a href="#" className={`${style.navbar__link} decoration`}>
+                <a
+                  href="/service"
+                  className={`${style.navbar__link} decoration`}
+                >
                   Service
                 </a>
               </div>
               <div className="pb-5">
-                <a href="#" className={`${style.navbar__link} decoration`}>
+                <a
+                  href="/certificates"
+                  className={`${style.navbar__link} decoration`}
+                >
                   Certificates
                 </a>
               </div>
               <div className="pb-5">
-                <a href="#" className={`${style.navbar__link} decoration`}>
+                <a
+                  href="/schedule"
+                  className={`${style.navbar__link} decoration`}
+                >
                   Schedule
                 </a>
               </div>
