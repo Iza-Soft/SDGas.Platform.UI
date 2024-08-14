@@ -33,19 +33,6 @@ const MainMenu = (): React.JSX.Element => {
                 <span>Schedule</span>
               </Link>
             </li>
-            {/* <li className={style.navbar__item}>
-              <Link to="/price" className={style.navbar__link}>
-                <i data-feather="price"></i>
-                <span>Price</span>
-              </Link>
-            </li>
-
-            <li className={style.navbar__item}>
-              <Link to="/gallery" className={style.navbar__link}>
-                <i data-feather="gallery"></i>
-                <span>Gallery</span>
-              </Link>
-            </li> */}
           </ul>
         </nav>
         <DrawerMenu />
