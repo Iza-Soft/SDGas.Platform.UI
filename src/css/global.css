@@ -123,13 +123,18 @@ a.decoration:hover::before {
   transform: scaleX(1);
 }
 
+.css-uhb5lp,
 .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
   max-width: 1024px !important;
 }
+
+.css-ohyacs,
 .css-bdhsul-MuiTypography-root-MuiDialogTitle-root {
   background-color: #e76610;
   font-family: "Nunito", Roboto, Arial, Helvetica, sans-serif !important;
 }
+
+.css-1ty026z,
 .css-qfso29-MuiTypography-root-MuiDialogContentText-root {
   color: #444 !important;
   -webkit-font-smoothing: antialiased;
