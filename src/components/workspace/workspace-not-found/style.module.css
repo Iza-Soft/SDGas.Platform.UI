@@ -22,3 +22,18 @@ div.container > .wrapper {
     gap: 20px;
   }
 }
+
+div.panel {
+  padding: 10px;
+  height: 1024px;
+  position: relative;
+}
+
+.pic {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
