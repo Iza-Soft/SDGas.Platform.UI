@@ -22,8 +22,8 @@ const WorkspaceHome = (): React.JSX.Element => {
           <div className="row">
             <div className="textarea pt-20">
               <p>
-                We are a small reputable, established company based in Oxford we
-                cover all Oxford shire we provide all aspects of Domestic
+                We are a small reputable, established company based in Fife. We
+                cover all Fife area and provide all aspects of Domestic
                 Central Heating & Gas work. We are a Gas Safe registered company
                 who strive for a quality finish. We can be trusted to carry out
                 almost any job to the highest standards. Carrying out
@@ -156,7 +156,7 @@ const WorkspaceHome = (): React.JSX.Element => {
             </div>
             <div className="textarea pt-20">
               <p>
-                Choose us for our Gas Safe and Refcom certifications, ensuring
+                Choose us for our Gas Safe ensuring
                 compliance and safety in every project. We guarantee quality
                 service by adhering to industry standards for gas safety and
                 refrigeration. With us, you can trust that your facilities are
@@ -164,7 +164,7 @@ const WorkspaceHome = (): React.JSX.Element => {
                 priority Any problems with your gas or heating we are only a
                 phone call away, so why not call us now to have an Engineer help
                 you back to warmth! Gas and Central Heating Specialists in
-                Yorkshire. If you have any enquiries, please get in touch on.
+               Fife. If you have any enquiries, please get in touch on.
               </p>
             </div>
           </div>

@@ -10,19 +10,12 @@ const Workspace = (): React.JSX.Element => {
   return (
     <Routes>
       <Route>
-        {/* <Route path="/" element={<Navigate replace to="/home" />} />
+        <Route path="/" element={<Navigate replace to="/home" />} />
         <Route path="/home" element={<WorkspaceHome />} />
         <Route path="/service" element={<WorkspaceService />} />
         <Route path="/certificates" element={<WorkspaceCertificates />} />
         <Route path="/schedule" element={<WorkspaceSchedule />} />
         <Route path="/gallery" element={<WorkspaceGallery />} />
-        <Route path="*" element={<WorkspaceNotFound />} /> */}
-        <Route path="/" element={<WorkspaceNotFound />} />
-        <Route path="/home" element={<WorkspaceNotFound />} />
-        <Route path="/service" element={<WorkspaceNotFound />} />
-        <Route path="/certificates" element={<WorkspaceNotFound />} />
-        <Route path="/schedule" element={<WorkspaceNotFound />} />
-        <Route path="/gallery" element={<WorkspaceNotFound />} />
         <Route path="*" element={<WorkspaceNotFound />} />
       </Route>
     </Routes>

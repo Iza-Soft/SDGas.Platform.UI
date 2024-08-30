@@ -127,7 +127,7 @@ const WorkspaceServiceBoilerMaintenance = (): React.JSX.Element => {
         >
           How long does a boiler service take?
         </div>
-        A boiler service should take 30-45 minutes but the time will vary
+        A boiler service should take 30-45 minutes, but the time will vary
         depending on the brand and model. Afterwards, the engineer will likely
         give you a service report, explaining what they’ve done. Don’t be afraid
         to ask any questions, you might have regarding the boiler service, we
