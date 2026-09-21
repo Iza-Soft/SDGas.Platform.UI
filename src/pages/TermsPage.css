@@ -1,0 +1,37 @@
+.terms {
+  padding-top: clamp(1.5rem, 4vw, 2rem);
+  padding-bottom: clamp(3rem, 8vw, 5rem);
+  max-width: 760px;
+}
+
+.terms__updated {
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.terms section {
+  margin-bottom: clamp(1.75rem, 4vw, 2.25rem);
+}
+
+.terms h2 {
+  color: var(--navy);
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 0.65rem;
+}
+
+.terms p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.terms a {
+  color: var(--orange);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}

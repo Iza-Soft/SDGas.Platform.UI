@@ -1,0 +1,83 @@
+.thank-you {
+  padding-top: clamp(3rem, 8vw, 5rem);
+  padding-bottom: clamp(3rem, 8vw, 5rem);
+  max-width: 640px;
+  text-align: left;
+  animation: thankYouIn 0.5s var(--ease-out);
+}
+
+.thank-you__icon {
+  margin-bottom: 1.25rem;
+  animation: thankYouIconIn 0.5s var(--ease-out) both;
+}
+
+.thank-you__icon circle {
+  stroke-dasharray: 158;
+  stroke-dashoffset: 158;
+  animation: thankYouDraw 0.7s var(--ease-out) forwards;
+}
+
+.thank-you__icon path {
+  stroke-dasharray: 32;
+  stroke-dashoffset: 32;
+  animation: thankYouDraw 0.4s var(--ease-out) 0.55s forwards;
+}
+
+.thank-you h1 {
+  color: var(--navy);
+  font-size: clamp(1.6rem, 4vw, 2.25rem);
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.thank-you p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+.thank-you__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@keyframes thankYouIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes thankYouIconIn {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes thankYouDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thank-you,
+  .thank-you__icon,
+  .thank-you__icon circle,
+  .thank-you__icon path {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    stroke-dashoffset: 0;
+  }
+}

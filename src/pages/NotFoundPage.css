@@ -1,0 +1,373 @@
+.not-found {
+  padding-top: clamp(2rem, 6vw, 3.5rem);
+  padding-bottom: clamp(3rem, 8vw, 5rem);
+  max-width: 640px;
+  text-align: left;
+}
+
+.leak {
+  width: min(100%, 320px);
+  margin: 0 auto clamp(1rem, 3vw, 1.5rem);
+}
+
+.leak__svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.leak__pipe {
+  fill: none;
+  stroke: var(--navy);
+  stroke-width: 26;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: leakPipeSettle 0.6s var(--ease-out) 0.1s both;
+}
+
+.leak__crack-line {
+  fill: none;
+  stroke: #04122b;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* A normal pipe coupling further along the run — not leaking, so it just
+   needs a thin darker outline to read as a separate fitting against the
+   solid pipe, the same trick used for the crack. */
+.leak__collar rect {
+  fill: var(--navy);
+  stroke: #04122b;
+  stroke-width: 1.2;
+}
+
+.leak__collar line {
+  stroke: #04122b;
+  stroke-width: 1.2;
+  stroke-linecap: round;
+}
+
+.leak__wet-stain {
+  fill: var(--navy);
+  opacity: 0.22;
+}
+
+.leak__drop-shape {
+  fill: var(--navy);
+}
+
+/* Each drop is a <g> so the fall/stretch transform composes with the
+   droplet path's own static translate — transform-box makes the stretch
+   scale around the droplet's own centre rather than the SVG origin. */
+.leak__drop {
+  transform-box: fill-box;
+  transform-origin: 50% 20%;
+  opacity: 0;
+  animation-name: leakDrip;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.leak__drop--1 {
+  animation-duration: 2.1s;
+  animation-delay: 0s;
+}
+
+.leak__drop--2 {
+  animation-duration: 2.4s;
+  animation-delay: 0.55s;
+}
+
+.leak__drop--3 {
+  animation-duration: 2.25s;
+  animation-delay: 1.1s;
+}
+
+.leak__puddle {
+  fill: var(--navy);
+  transform-origin: 114px 196px;
+  animation: leakPuddle 2.2s ease-in-out infinite;
+}
+
+.leak__ripple {
+  fill: none;
+  stroke: var(--navy);
+  stroke-width: 1.4;
+  opacity: 0;
+  animation-name: leakRipple;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-iteration-count: infinite;
+}
+
+.leak__ripple--1 {
+  transform-origin: 114px 196px;
+  animation-duration: 2.1s;
+  animation-delay: 0s;
+}
+
+.leak__ripple--2 {
+  transform-origin: 107px 196px;
+  animation-duration: 2.4s;
+  animation-delay: 0.55s;
+}
+
+.leak__ripple--3 {
+  transform-origin: 122px 196px;
+  animation-duration: 2.25s;
+  animation-delay: 1.1s;
+}
+
+.leak__splash {
+  fill: var(--navy);
+  opacity: 0;
+  animation-name: leakSplash;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-iteration-count: infinite;
+}
+
+.leak__splash--1-1,
+.leak__splash--1-2 {
+  animation-duration: 2.1s;
+  animation-delay: 0s;
+}
+
+.leak__splash--2-1,
+.leak__splash--2-2 {
+  animation-duration: 2.4s;
+  animation-delay: 0.55s;
+}
+
+.leak__splash--3-1,
+.leak__splash--3-2 {
+  animation-duration: 2.25s;
+  animation-delay: 1.1s;
+}
+
+.leak__splash--1-1,
+.leak__splash--2-1,
+.leak__splash--3-1 {
+  --sx: -9px;
+  --sy: -6px;
+}
+
+.leak__splash--1-2,
+.leak__splash--2-2,
+.leak__splash--3-2 {
+  --sx: 9px;
+  --sy: -5px;
+}
+
+@keyframes leakPipeSettle {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* A drip's life: form as a bead at the crack, stretch as surface tension
+   breaks, fall with gravity-like acceleration (small early steps, larger
+   later ones), then squash flat on impact and fade. */
+@keyframes leakDrip {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scaleY(0.4) scaleX(0.7);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1) scaleX(1);
+  }
+  20% {
+    transform: translateY(1px) scaleY(1.08) scaleX(0.96);
+  }
+  38% {
+    transform: translateY(9px) scaleY(1.15) scaleX(0.92);
+  }
+  56% {
+    transform: translateY(31px) scaleY(1.25) scaleX(0.88);
+  }
+  72% {
+    transform: translateY(62px) scaleY(1.4) scaleX(0.8);
+  }
+  84% {
+    opacity: 1;
+    transform: translateY(97px) scaleY(1.55) scaleX(0.72);
+  }
+  89% {
+    opacity: 1;
+    transform: translateY(109px) scaleY(0.35) scaleX(1.8);
+  }
+  96% {
+    opacity: 0.5;
+    transform: translateY(109px) scaleY(0.2) scaleX(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(109px) scaleY(0.2) scaleX(1.3);
+  }
+}
+
+@keyframes leakSplash {
+  0%,
+  87% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(calc(var(--sx) * 0.3), calc(var(--sy) * 0.6)) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--sx), var(--sy)) scale(0.2);
+  }
+}
+
+@keyframes leakPuddle {
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+  45% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.05);
+  }
+  60% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes leakRipple {
+  0%,
+  85% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  90% {
+    opacity: 0.65;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leak__pipe,
+  .leak__drop,
+  .leak__puddle,
+  .leak__ripple,
+  .leak__splash {
+    animation: none;
+  }
+
+  .leak__pipe {
+    opacity: 1;
+    transform: none;
+  }
+
+  .leak__drop,
+  .leak__ripple,
+  .leak__splash {
+    opacity: 0;
+  }
+}
+
+.not-found__code {
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 900;
+  color: var(--orange);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: notFoundFadeUp 0.6s var(--ease-out) 0.5s forwards;
+}
+
+.not-found h1 {
+  color: var(--navy);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: notFoundFadeUp 0.6s var(--ease-out) 0.62s forwards;
+}
+
+.not-found > p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: notFoundFadeUp 0.6s var(--ease-out) 0.74s forwards;
+}
+
+@keyframes notFoundFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .not-found__code,
+  .not-found h1,
+  .not-found > p {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+.not-found__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: notFoundFadeUp 0.6s var(--ease-out) 0.86s forwards;
+}
+
+.not-found__nav {
+  list-style: none;
+  margin: 0;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid #e5e8ef;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: notFoundFadeUp 0.6s var(--ease-out) 0.98s forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .not-found__links,
+  .not-found__nav {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+.not-found__nav a {
+  color: var(--navy);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.not-found__nav a:hover {
+  color: var(--orange);
+  text-decoration: underline;
+}

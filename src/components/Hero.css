@@ -1,0 +1,131 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+  animation: heroKenBurns 24s ease-in-out infinite alternate;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(14, 46, 92, 0.9), rgba(231, 102, 16, 0.85));
+  z-index: -1;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: clamp(3rem, 8vw, 6rem);
+  padding-bottom: clamp(3rem, 8vw, 6rem);
+  color: var(--white);
+}
+
+.hero__content h1 {
+  font-size: clamp(1.6rem, 4.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.25;
+  max-width: 40ch;
+}
+
+.hero__content p {
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.hero__cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.hero__cta-group .btn {
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  padding: 1rem 1.75rem;
+  box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.45);
+  flex: 1 1 auto;
+}
+
+.hero__or {
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+
+/* Below this width two full-size buttons side by side start feeling
+   cramped, so stack them with "or" centred between instead. */
+@media (max-width: 480px) {
+  .hero__cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .hero__cta-group .btn {
+    width: 100%;
+  }
+
+  .hero__or {
+    align-self: center;
+  }
+}
+
+.hero__in {
+  opacity: 0;
+  transform: translateY(32px);
+  animation: heroFadeUp 0.9s var(--ease-out) forwards;
+}
+
+.hero__in--1 {
+  animation-delay: 0.1s;
+}
+
+.hero__in--2 {
+  animation-delay: 0.3s;
+}
+
+.hero__in--3 {
+  animation-delay: 0.5s;
+}
+
+@keyframes heroFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroKenBurns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__bg {
+    animation: none;
+  }
+
+  .hero__in {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}

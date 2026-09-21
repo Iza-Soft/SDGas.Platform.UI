@@ -1,0 +1,283 @@
+:root {
+  color-scheme: light;
+  --orange: #e76610;
+  --orange-dark: #c6550c;
+  --navy: #0e2e5c;
+  --navy-2: #203568;
+  --yellow: #ffce33;
+  --text: #444;
+  --white: #fff;
+  --max-width: 1300px;
+  --section-pad-y: clamp(2.5rem, 6vw, 5rem);
+  --section-pad-x: clamp(1rem, 4vw, 2.5rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* prevents any stray wide element from creating horizontal scroll / overlap on small screens */
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--text);
+  font-family: 'Nunito', Roboto, Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: var(--section-pad-x);
+  padding-right: var(--section-pad-x);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--navy);
+  color: var(--white);
+  border-radius: 6px;
+  padding: 0.85rem 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: normal;
+  text-align: center;
+  transition: background-color 0.2s ease, transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
+}
+
+.btn:hover {
+  background-color: var(--navy-2);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -8px rgba(14, 46, 92, 0.5);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn--orange {
+  background-color: var(--orange);
+}
+
+.btn--orange:hover {
+  background-color: var(--orange-dark);
+  box-shadow: 0 10px 20px -8px rgba(231, 102, 16, 0.55);
+}
+
+.btn--navy {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.btn--navy:hover {
+  background-color: var(--navy-2);
+  color: var(--white);
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.35);
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.section-heading h2,
+.section-heading h1 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  color: var(--navy);
+  font-weight: 800;
+}
+
+.section-heading hr {
+  width: 60px;
+  height: 4px;
+  background: var(--orange);
+  border: none;
+  border-radius: 2px;
+  margin: 0;
+  transition: width 0.7s var(--ease-out) 0.15s;
+}
+
+.reveal .section-heading hr {
+  width: 0;
+}
+
+.reveal.is-visible .section-heading hr {
+  width: 60px;
+}
+
+/* ---------- Scroll-reveal system ----------
+   Bold, obviously-directional entrances: sections fly in from the side
+   (alternating left/right down the page via useReveal's `direction` arg),
+   card grids cascade in with alternating left/right children. Kept to
+   translate + opacity only — no bounce/wobble — so it reads as confident
+   rather than gimmicky. */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.75s var(--ease-out), transform 0.75s var(--ease-out);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition: opacity 0.85s var(--ease-out), transform 0.85s var(--ease-out);
+}
+
+.reveal-left {
+  transform: translateX(-90px);
+}
+
+.reveal-right {
+  transform: translateX(90px);
+}
+
+.reveal-left.is-visible,
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-left .section-heading hr,
+.reveal-right .section-heading hr {
+  width: 0;
+}
+
+.reveal-left.is-visible .section-heading hr,
+.reveal-right.is-visible .section-heading hr {
+  width: 60px;
+}
+
+/* Staggered children — used on card grids so items cascade in rather than
+   popping together, alternating in from left/right so the motion is
+   obviously directional rather than a uniform fade-up. Falls back
+   gracefully if a grid has more items than listed delays; they just share
+   the last delay. */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateX(-64px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.reveal-stagger > *:nth-child(even) {
+  transform: translateX(64px);
+}
+
+.reveal-stagger.is-visible > * {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-stagger > *:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.reveal-stagger > *:nth-child(2) {
+  transition-delay: 0.14s;
+}
+.reveal-stagger > *:nth-child(3) {
+  transition-delay: 0.23s;
+}
+.reveal-stagger > *:nth-child(4) {
+  transition-delay: 0.32s;
+}
+.reveal-stagger > *:nth-child(5) {
+  transition-delay: 0.41s;
+}
+.reveal-stagger > *:nth-child(n + 6) {
+  transition-delay: 0.5s;
+}
+
+/* Soft expanding-ring pulse used sparingly on the single most important
+   call-to-action (Hero's Call Now button) to draw the eye without any
+   bounce/scale — just a quiet, repeating glow. */
+@keyframes cta-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(231, 102, 16, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(231, 102, 16, 0);
+  }
+}
+
+.cta-pulse {
+  animation: cta-pulse 2.6s ease-out infinite;
+}
+
+/* Hover-lift used on card-style components throughout the site. */
+.hover-lift {
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 32px -16px rgba(14, 46, 92, 0.28);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-stagger > * {
+    opacity: 1;
+    transform: none;
+  }
+
+  .reveal .section-heading hr,
+  .reveal.is-visible .section-heading hr,
+  .reveal-left .section-heading hr,
+  .reveal-left.is-visible .section-heading hr,
+  .reveal-right .section-heading hr,
+  .reveal-right.is-visible .section-heading hr {
+    width: 60px;
+  }
+
+  .cta-pulse {
+    animation: none !important;
+  }
+}

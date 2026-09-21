@@ -1,0 +1,62 @@
+.cta-banner {
+  background: var(--navy);
+  color: var(--white);
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+
+.cta-banner__inner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.cta-banner__icon {
+  flex-shrink: 0;
+  color: var(--orange);
+  animation: phoneRing 2.6s ease-in-out infinite;
+  transform-origin: 70% 30%;
+}
+
+@keyframes phoneRing {
+  0%,
+  75%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  80% {
+    transform: rotate(-12deg) scale(1.08);
+  }
+  85% {
+    transform: rotate(10deg) scale(1.08);
+  }
+  90% {
+    transform: rotate(-8deg) scale(1.05);
+  }
+  95% {
+    transform: rotate(6deg) scale(1.02);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-banner__icon {
+    animation: none;
+  }
+}
+
+.cta-banner__inner p {
+  font-weight: 600;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  margin-bottom: 0.25rem;
+}
+
+.cta-banner__inner a {
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  text-decoration: none;
+  color: var(--yellow);
+}
